@@ -3,6 +3,7 @@ package edu.mirea.onebeattrue.multitask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import edu.mirea.onebeattrue.multitask.databinding.ActivityMainBinding
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -20,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         saveButton.setOnClickListener {
             val newThread = MyThread()
-            newThread.square(5, textViewResult)
+            val int = (Math.random() * 10).toInt()
+            newThread.square(int, textViewResult)
             textViewName.text = editTextName.text.toString()
         }
     }
