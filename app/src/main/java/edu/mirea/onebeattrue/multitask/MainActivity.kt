@@ -16,9 +16,11 @@ class MainActivity : AppCompatActivity() {
         val editTextName = binding.editTextName
         val textViewName = binding.textViewName
 
+        val textViewResult = binding.textViewResult
+
         saveButton.setOnClickListener {
             val newThread = MyThread()
-            newThread.doWork()
+            newThread.square(5, textViewResult)
             textViewName.text = editTextName.text.toString()
         }
     }
