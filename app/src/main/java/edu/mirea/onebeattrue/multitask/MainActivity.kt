@@ -21,7 +21,5 @@ class MainActivity : AppCompatActivity() {
             newThread.doWork()
             textViewName.text = editTextName.text.toString()
         }
-
-
     }
 }

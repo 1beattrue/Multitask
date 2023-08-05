@@ -2,6 +2,8 @@ package edu.mirea.onebeattrue.multitask
 
 class MyThread {
     fun doWork() {
-        Thread.sleep(15000)
+        Thread(Runnable {
+            Thread.sleep(15000)
+        }).start()
     }
 }
