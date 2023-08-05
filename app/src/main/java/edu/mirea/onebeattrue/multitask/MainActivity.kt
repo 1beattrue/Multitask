@@ -17,7 +17,11 @@ class MainActivity : AppCompatActivity() {
         val textViewName = binding.textViewName
 
         saveButton.setOnClickListener {
+            val newThread = MyThread()
+            newThread.doWork()
             textViewName.text = editTextName.text.toString()
         }
+
+
     }
 }
